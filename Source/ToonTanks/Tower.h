@@ -27,4 +27,10 @@ class TOONTANKS_API ATower : public ABasePawn
 		class ATank* Tank;
 		UPROPERTY(EditAnywhere, Category = "TowerVariables", meta = (AllowPrivateAccess = "true"))
 		float FireRange = 100;
+		UPROPERTY(EditAnywhere, Category = "TowerVariables", meta = (AllowPrivateAccess = "true"))
+		float FireRate =2.f;
+
+		FTimerHandle FireRateTimerHandle;
+		void CheckFireCondition();
+		bool InFireRange();
 };

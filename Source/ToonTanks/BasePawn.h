@@ -28,8 +28,7 @@ private:
 	UStaticMeshComponent* TurretMesh;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawner;
-	
-	// Called to bind functionality to input
-	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Combat")
+	TSubclassOf <class AProjectile> ProjectileClass;
 };
