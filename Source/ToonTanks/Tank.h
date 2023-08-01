@@ -30,9 +30,9 @@ class TOONTANKS_API ATank : public ABasePawn
 		class USpringArmComponent* SpringArm;
 		UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* Camera;
-		UPROPERTY(EditAnywhere, Category = "Variables")
+		UPROPERTY(EditAnywhere, Category = "Variables", meta = (AllowPrivateAccess = "true"))
 		int32 Speed = 300;
-		UPROPERTY(EditAnywhere, Category = "Variables")
+		UPROPERTY(EditAnywhere, Category = "Variables", meta = (AllowPrivateAccess = "true"))
 		int32 TurnRate = 200;
 		void Move(float Value);
 		void Turn(float Value);
