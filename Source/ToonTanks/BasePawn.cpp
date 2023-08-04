@@ -40,7 +40,7 @@ void ABasePawn::Fire()
             FColor::Green,
             false,
             3.f);
-	GetWorld()->SpawnActor<AProjectile>(ProjectileClass,ProjectileSpawner->GetComponentLocation(),ProjectileSpawner->GetComponentRotation());
+	GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawner->GetComponentLocation(), ProjectileSpawner->GetComponentRotation());
 }
 
 

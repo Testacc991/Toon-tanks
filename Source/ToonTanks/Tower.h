@@ -22,15 +22,16 @@ class TOONTANKS_API ATower : public ABasePawn
 		// Called when the game starts or when spawned
 		virtual void BeginPlay() override;
 
-	private:
 		UPROPERTY(VisibleAnywhere, Category = "Tank")
-		class ATank* Tank;
+			class ATank* Tank;
 		UPROPERTY(EditAnywhere, Category = "TowerVariables", meta = (AllowPrivateAccess = "true"))
-		float FireRange = 100;
+			float FireRange = 800;
 		UPROPERTY(EditAnywhere, Category = "TowerVariables", meta = (AllowPrivateAccess = "true"))
-		float FireRate =2.f;
+			float FireRate = 2.f;
 
 		FTimerHandle FireRateTimerHandle;
 		void CheckFireCondition();
 		bool InFireRange();
+	private:
+		
 };
